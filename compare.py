@@ -1,16 +1,20 @@
 from dictionary import *
 
-def compare_fragments(rule, key):
-
-	places = [0,1,2,3,4,5,6,7,8,9]
+def compare_fragments(rule1, rule2):
 
 	same = True
 
-	key_idx = 0
-	for t in rule:
-		if(t in places or t in key):
-			print("good so far: ", t)
+	idx = 0
+	for t in rule1:
+		if(len(rule2) >= len(rule1)):
+			print("compare ", t)
+			print("and ", rule2[idx])
+			if(t == rule2[idx] or (isinstance(t, int) and isinstance(rule2[idx], int))):
+				idx += 1
+				continue
+			else:
+				return False
 		else:
-			same = False
+			return(False)
 
 	return same

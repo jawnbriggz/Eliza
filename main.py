@@ -18,9 +18,11 @@ def main():
 		responses = get_response(rule, key)
 
 #		now that you have the possible response strings, use them plus "fragments" to transform and construct a ELIZA's response
-		print(responses)
+#		print(responses)
 
-#		same = compare_fragments(rule, key)
+#		respond back
+		answer = transform(responses, fragments)
+#		print(answer)
 
 
 

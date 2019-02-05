@@ -1,26 +1,40 @@
 from dictionary import *
 from compare import *
+from rules import *
 
 def get_response(rule, key):
 
+	rules_set = False
+
+	# get list of possible responses according to keyword
+	# WORK ON CHOOSING BY PRIORITY
 	n = len(key)
-	print("KEY ", key)
 	response_rules = []
 	for i in range(0,n):
-		temp = key[i]
-		response_rules = keywords[temp]
+		# THIS IS BY FIRST COME FIRST SERVE LOGIC NOT BY IMPORTANCE OF KEYWORD 
+		if(not rules_set):
+			temp = key[i]
+			response_rules = keywords[temp]
+			rules_set = True
 
+	# list of records from the dictionary where key="[keyword]" and value="hey, this is a 3 string"
+	m = len(response_rules)
+	match = []
+	for i in range(0,m):
+		temp = response_rules[i]
+		r = temp[0]
+		#find the right rule pattern
+		if(compare_fragments(rule, r)):
+			match = match + temp[1]
 
-	print("response_rules : ", response_rules)
+	return(match)
 
-	print("KEY ", key)
+def transform(responses, fragments):
 
-	rules = response_rules[0]
+#	TODO
+#			start off here with the broken down rules and start to transform them into an actual answer
 
-	print("heckin rules", rules)
+	print(responses)
+	print(fragments)
 
-	print("r in rules: ")
-
-	response_strings = rules[1]
-
-	return(response_strings)
+	return(responses)
