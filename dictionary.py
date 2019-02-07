@@ -50,5 +50,8 @@ trans = {
 	"you": "I",
 	"me": "you",
 	"i": "you",
-	"am": "was"
+	"am": "was",
+	"brother": "the guy",
+	"dad": "pop",
+	"mom": "gal"
 }

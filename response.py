@@ -90,10 +90,14 @@ def parse(turn):
 	dont = re.findall(r"dont", turn)
 	to_be = re.findall(r"(be|am|are|is|being)", turn)
 
+	emotion = re.findall(r"(sad|mad|angry|happy|bored|elated|joyful|excited)", turn)
+
 	if(len(offended) > 0):
 		rules.append(1)
 	elif(len(you_me) > 0):
 		rules.append(3)
+	elif(len(emotion) > 0):
+		rules.append(12)
 	elif(len(eliza) > 0):
 		rules.append(2)
 	elif(len(you_are) > 0):
@@ -154,12 +158,16 @@ def process(logic):
 		return "tell me more about your father"
 	elif(logic == 11):
 		return "im interested to know more about"
+	elif(logic == 12):
+		return "why"
 	else:
 		return "hi bitch, bye bitch"
 
 
 def change(word):
 
-	new_word = trans[word]
+	if(word in trans):
+		new_word = trans[word]
+		word = new_word
 
-	return new_word
+	return word
