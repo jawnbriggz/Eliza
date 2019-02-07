@@ -1,2 +1,2 @@
 # Eliza
-Eliza dialog system
+rule based dialogue system
