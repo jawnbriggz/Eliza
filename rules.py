@@ -1,8 +1,6 @@
 
 def get_rule(fragments, key):
 
-	print(fragments)
-
 	place = 0
 
 	pattern = []
@@ -14,7 +12,6 @@ def get_rule(fragments, key):
 				pattern.append(place)
 				place = place + 1
 
-	print(pattern)
 	return(pattern)
 
 

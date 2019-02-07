@@ -17,5 +17,38 @@ keywords = {
 		[[0, "sad", 0], [["heck, why you sad about",0], ["heck"], ["heck"]]],
 		[[0, "you", 0, "sad"], [["what makes you think I", 0, "you?"]]],
 		[[0, "you", 0, "me", "sad", 0],[["im sorry i am making you sad"]]]
+	],
+	"us": [
+		[[""],[[""],[""]]]
+	],
+	"sad": [
+		[[""],[[""],[""]]]
+	],
+	"mother": [
+		[[""],[[""],[""]]]
+	],
+	"mom": [
+		[[""],[[""],[""]]]
+	],
+	"dad": [
+		[[""],[[""],[""]]]
+	],
+	"father": [
+		[[""],[[""],[""]]]
+	],
+	"brother": [
+		[[""],[[""],[""]]]
+	],
+	"i": [
+		[[""],[[""],[""]]]
 	]
+}
+
+## TRANSFORM KEYWORDS
+
+trans = {
+	"you": "I",
+	"me": "you",
+	"i": "you",
+	"am": "was"
 }

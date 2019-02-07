@@ -4,8 +4,8 @@ from compare import *
 from response import *
 
 def main():
-
-	print("hi im eliza how u")
+	print()
+	print("hi im eliza how u", "\n")
 
 	while(True):
 
@@ -20,10 +20,13 @@ def main():
 #		now that you have the possible response strings, use them plus "fragments" to transform and construct a ELIZA's response
 #		print(responses)
 
-#		respond back
-		answer = transform(responses, fragments)
-#		print(answer)
+#		proper line spacing for output
+		print()
 
+#		respond back
+		answer = transform(fragments, rule)
+		bigger_answer = answer.upper()
+		print(bigger_answer, "\n")
 
 
 
